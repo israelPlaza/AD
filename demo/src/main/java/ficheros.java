@@ -4,6 +4,7 @@ import java.util.Scanner;
 
 public class ficheros {
   protected Scanner sc = new Scanner(System.in);   
+  protected int dato=0;
     public static void main(String[] args) {
      
     File nuevoFichero= new File("/home/isra/CLASE/AD/directorioPrueba/pruebaFichero.txt");
@@ -68,7 +69,7 @@ System.out.println(miFichero.getName() + " no tiene permisos de escritura");
 }
 
 mostramosLista();
-
+mostarMenu();
 
     }
 public static void mostramosLista(){
@@ -84,7 +85,8 @@ public static void mostramosLista(){
         }
     }
 }
-    public  int mostarMenu() {
+public  int mostarMenu() {
+    
         System.out.println("----------------------------------------------------");
         System.out.println("                       MENU                         ");
         System.out.println("----------------------------------------------------");

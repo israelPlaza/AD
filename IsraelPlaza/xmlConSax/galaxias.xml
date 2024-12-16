@@ -1,30 +1,30 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <galaxias>
-    <galaxia numero="1">
+    <galaxia numero="1.0">
         <nombre>Via Lactea</nombre>
         <tipo>Espiral Barrada</tipo>
         <magnitud>20.0</magnitud>
         <grupo>Local</grupo>
     </galaxia>
-   <galaxia numero="2">
+   <galaxia numero="2.0">
         <nombre>Can Mayor</nombre>
         <tipo>Irregular</tipo>
         <magnitud>0.0</magnitud>
         <grupo>Local</grupo>
     </galaxia>
-    <galaxia numero="3">
+    <galaxia numero="3.0">
         <nombre>Enana Eleiptica de Sagitario</nombre>
         <tipo>Espiral</tipo>
         <magnitud>12.6</magnitud>
         <grupo>Local</grupo>
     </galaxia>
-    <galaxia numero="4">
+    <galaxia numero="4.0">
         <nombre>Gran Nube de  Magallanes</nombre>
         <tipo>Espiral irregular</tipo>
         <magnitud>17.9</magnitud>
         <grupo>Local</grupo>
     </galaxia>
-    <galaxia numero="5">
+    <galaxia numero="5.0">
         <nombre>Enana de Botones</nombre>
         <tipo>Espiral</tipo>
         <magnitud>5.8</magnitud>

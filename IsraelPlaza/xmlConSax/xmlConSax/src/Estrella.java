@@ -24,7 +24,7 @@ public class Estrella {
         this.nombre = nombre;
     }
 
-    public String getTipo(String string) {
+    public String getTipo() {
         return tipo;
     }
 
@@ -32,15 +32,15 @@ public class Estrella {
         this.tipo = tipo;
     }
 
-    public double getMagnitud(String string) {
+    public double getMagnitud() {
         return magnitud;
     }
 
-    public void setMagnitud() {
+    public void setMagnitud(double magnitud) {
         this.magnitud = magnitud;
     }
 
-    public String getGrupo(String string) {
+    public String getGrupo() {
         return grupo;
     }
 
@@ -50,7 +50,7 @@ public class Estrella {
 
     @Override
     public String toString() {
-        return "Version{" +
+        return "Estrella{" +
                 "numero=" + numero +
                 ", nombre='" + nombre + '\'' +
                 ", tipo='" + tipo + '\'' +
@@ -59,4 +59,3 @@ public class Estrella {
                 '}';
     }
 }
-

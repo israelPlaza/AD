@@ -3,20 +3,22 @@ import org.xml.sax.helpers.DefaultHandler;
 import java.util.ArrayList;
 
 public class EstrellasHandler extends DefaultHandler {
-    private final ArrayList<Estrella> estrellas = new ArrayList();
+    private final ArrayList<Estrella> estrellas = new ArrayList<>();
     private Estrella estrella;
-    private StringBuilder buffer=new StringBuilder();
+    private StringBuilder buffer = new StringBuilder();
 
     public ArrayList<Estrella> getEstrellas() {
         return estrellas;
     }
+
     @Override
     public void characters(char[] ch, int start, int length) throws SAXException {
-        buffer.append(ch,start, length);
+        buffer.append(ch, start, length);
     }
+
     @Override
     public void endElement(String uri, String localName, String qName) throws SAXException {
-        switch(qName){
+        switch (qName) {
             case "nombre":
                 estrella.setNombre(buffer.toString());
                 break;
@@ -24,24 +26,26 @@ public class EstrellasHandler extends DefaultHandler {
                 estrella.setTipo(buffer.toString());
                 break;
             case "magnitud":
-                estrella.setMagnitud();
+                estrella.setMagnitud(Double.parseDouble(buffer.toString()));
                 break;
             case "grupo":
-                estrella.getGrupo(buffer.toString());
+                estrella.setGrupo(buffer.toString());
+                break;
         }
     }
+
     @Override
     public void startElement(String uri, String localName, String qName, Attributes attributes) throws SAXException {
-        switch(qName){
-            case "version":
+        switch (qName) {
+            case "estrella":
                 estrella = new Estrella();
                 estrellas.add(estrella);
                 estrella.setNumero(Double.parseDouble(attributes.getValue("numero")));
                 break;
             case "nombre":
             case "tipo":
-            case  "magnitud":
-            case  "grupo":
+            case "magnitud":
+            case "grupo":
                 buffer.delete(0, buffer.length());
                 break;
         }
